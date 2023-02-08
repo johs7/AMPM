@@ -8,3 +8,8 @@ Una vez iniciada la sesión, los usuarios pueden ver todos los productos en una 
 El proyecto fue publicado en Github y se realizaron commits en la rama test para cada paso del desarrollo, excepto la creación de la base de datos.
 
 En conclusión, este proyecto cumplió con los requerimientos de la empresa y fue desarrollado siguiendo las buenas prácticas de uso de Git y Github.
+Este proyecto fue un desafío interesante para poner en práctica mis habilidades en el desarrollo de aplicaciones de escritorio utilizando C# y NET Framework. Aunque no pude completar todos los requerimientos establecidos en el tiempo establecido, estoy satisfecho con el progreso que logré hacer y estoy listo para aprender y mejorar.
+
+Me gustaría destacar que la integración con Github y la creación de ramas y commits fueron una experiencia enriquecedora, y estoy ansioso por seguir aprendiendo sobre Git y cómo puedo utilizarlo para mejorar mis habilidades en el desarrollo de software.
+
+En general, estoy agradecido por esta oportunidad de pasantía y estoy emocionado de seguir aprendiendo y mejorando mis habilidades en el desarrollo de software.
