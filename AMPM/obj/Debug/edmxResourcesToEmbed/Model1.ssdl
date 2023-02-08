@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AMPMModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="options">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="255" />
+    <Property Name="product_code" Type="int" />
+    <Property Name="status" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="products">
+    <Key>
+      <PropertyRef Name="code" />
+    </Key>
+    <Property Name="code" Type="int" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="255" />
+    <Property Name="stock" Type="int" />
+    <Property Name="estado" Type="varchar" MaxLength="10" />
+    <Property Name="proveedor" Type="varchar" MaxLength="255" />
+    <Property Name="img" Type="image" />
+  </EntityType>
+  <EntityType Name="users">
+    <Key>
+      <PropertyRef Name="username" />
+    </Key>
+    <Property Name="username" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="255" />
+    <Property Name="name" Type="varchar" MaxLength="255" />
+    <Property Name="last_name" Type="varchar" MaxLength="255" />
+    <Property Name="email" Type="varchar" MaxLength="255" />
+    <Property Name="phone" Type="varchar" MaxLength="255" />
+    <Property Name="creation_date" Type="date" />
+  </EntityType>
+  <Association Name="FK__options__product__2D27B809">
+    <End Role="products" Type="Self.products" Multiplicity="0..1" />
+    <End Role="options" Type="Self.options" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="products">
+        <PropertyRef Name="code" />
+      </Principal>
+      <Dependent Role="options">
+        <PropertyRef Name="product_code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="AMPMModelStoreContainer">
+    <EntitySet Name="options" EntityType="Self.options" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="products" EntityType="Self.products" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="users" EntityType="Self.users" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__options__product__2D27B809" Association="Self.FK__options__product__2D27B809">
+      <End Role="products" EntitySet="products" />
+      <End Role="options" EntitySet="options" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

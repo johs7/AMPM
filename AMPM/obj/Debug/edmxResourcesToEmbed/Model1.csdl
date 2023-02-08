@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AMPMModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="products">
+    <Key>
+      <PropertyRef Name="code" />
+    </Key>
+    <Property Name="code" Type="Int32" Nullable="false" />
+    <Property Name="nombre" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="stock" Type="Int32" />
+    <Property Name="estado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="proveedor" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="options" Relationship="AMPMModel.FK__options__product__2B3F6F97" FromRole="products" ToRole="options" />
+    <Property Name="img" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="users">
+    <Key>
+      <PropertyRef Name="username" />
+    </Key>
+    <Property Name="username" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="last_name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="phone" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="creation_date" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityContainer Name="AMPMEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="products" EntityType="Self.products" />
+    <EntitySet Name="users" EntityType="Self.users" />
+    <EntitySet Name="options" EntityType="AMPMModel.options" />
+    <AssociationSet Name="FK__options__product__2B3F6F97" Association="AMPMModel.FK__options__product__2B3F6F97">
+      <End Role="products" EntitySet="products" />
+      <End Role="options" EntitySet="options" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="options">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="product_code" Type="Int32" />
+    <Property Name="status" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="products" Relationship="AMPMModel.FK__options__product__2B3F6F97" FromRole="options" ToRole="products" />
+  </EntityType>
+  <Association Name="FK__options__product__2B3F6F97">
+    <End Type="AMPMModel.products" Role="products" Multiplicity="0..1" />
+    <End Type="AMPMModel.options" Role="options" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="products">
+        <PropertyRef Name="code" />
+      </Principal>
+      <Dependent Role="options">
+        <PropertyRef Name="product_code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
