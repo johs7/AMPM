@@ -50,16 +50,16 @@
             this.btnEliminar = new Guna.UI2.WinForms.Guna2Button();
             this.DgvUsers = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtBuscar = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnBuscar = new Guna.UI2.WinForms.Guna2Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnClose = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnBuscar = new Guna.UI2.WinForms.Guna2Button();
+            this.txtBuscar = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ERROR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvUsers)).BeginInit();
             this.guna2CustomGradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -392,6 +392,7 @@
             this.DgvUsers.ThemeStyle.RowsStyle.Height = 22;
             this.DgvUsers.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(133)))), ((int)(((byte)(147)))));
             this.DgvUsers.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.DgvUsers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvUsers_CellClick);
             // 
             // guna2CustomGradientPanel1
             // 
@@ -410,17 +411,45 @@
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(928, 66);
             this.guna2CustomGradientPanel1.TabIndex = 26;
             // 
-            // label7
+            // btnClose
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Linen;
-            this.label7.Location = new System.Drawing.Point(12, 7);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(387, 42);
-            this.label7.TabIndex = 27;
-            this.label7.Text = "Registro de Usuarios";
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.Image = global::AMPM.Properties.Resources.icons8_cerrar_ventana_48;
+            this.btnClose.Location = new System.Drawing.Point(884, -5);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(52, 50);
+            this.btnClose.TabIndex = 28;
+            this.btnClose.TabStop = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click_1);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::AMPM.Properties.Resources.tarjeta_de_miembro;
+            this.pictureBox1.Location = new System.Drawing.Point(399, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(65, 56);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 28;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackColor = System.Drawing.Color.Transparent;
+            this.btnBuscar.BorderRadius = 7;
+            this.btnBuscar.CheckedState.Parent = this.btnBuscar;
+            this.btnBuscar.CustomImages.Parent = this.btnBuscar;
+            this.btnBuscar.FillColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnBuscar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnBuscar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnBuscar.HoverState.Parent = this.btnBuscar;
+            this.btnBuscar.Location = new System.Drawing.Point(738, 15);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.ShadowDecoration.Parent = this.btnBuscar;
+            this.btnBuscar.Size = new System.Drawing.Size(110, 34);
+            this.btnBuscar.TabIndex = 27;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click_1);
             // 
             // txtBuscar
             // 
@@ -448,45 +477,17 @@
             this.txtBuscar.Size = new System.Drawing.Size(116, 31);
             this.txtBuscar.TabIndex = 27;
             // 
-            // btnBuscar
+            // label7
             // 
-            this.btnBuscar.BackColor = System.Drawing.Color.Transparent;
-            this.btnBuscar.BorderRadius = 7;
-            this.btnBuscar.CheckedState.Parent = this.btnBuscar;
-            this.btnBuscar.CustomImages.Parent = this.btnBuscar;
-            this.btnBuscar.FillColor = System.Drawing.Color.DarkSlateBlue;
-            this.btnBuscar.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnBuscar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnBuscar.HoverState.Parent = this.btnBuscar;
-            this.btnBuscar.Location = new System.Drawing.Point(738, 15);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.ShadowDecoration.Parent = this.btnBuscar;
-            this.btnBuscar.Size = new System.Drawing.Size(110, 34);
-            this.btnBuscar.TabIndex = 27;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click_1);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::AMPM.Properties.Resources.tarjeta_de_miembro;
-            this.pictureBox1.Location = new System.Drawing.Point(399, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(65, 56);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 28;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnClose
-            // 
-            this.btnClose.BackColor = System.Drawing.Color.Transparent;
-            this.btnClose.Image = global::AMPM.Properties.Resources.icons8_cerrar_ventana_48;
-            this.btnClose.Location = new System.Drawing.Point(884, -5);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(52, 50);
-            this.btnClose.TabIndex = 28;
-            this.btnClose.TabStop = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click_1);
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Linen;
+            this.label7.Location = new System.Drawing.Point(12, 7);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(387, 42);
+            this.label7.TabIndex = 27;
+            this.label7.Text = "Registro de Usuarios";
             // 
             // FormUsers
             // 
@@ -518,8 +519,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.DgvUsers)).EndInit();
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

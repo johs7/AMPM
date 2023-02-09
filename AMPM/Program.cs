@@ -16,7 +16,7 @@ namespace AMPM
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Formularios.FormMain());
+            Application.Run(new Form1());
         }
     }
 }

@@ -203,13 +203,13 @@ namespace AMPM.Formularios
                 }
                 else
                 {
-
+                    MessageBox.Show("error");
                 }
 
             }
             catch
             {
-
+                MessageBox.Show("error");
             }
         }
 
@@ -329,6 +329,11 @@ namespace AMPM.Formularios
         private void btnClose_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void DgvUsers_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

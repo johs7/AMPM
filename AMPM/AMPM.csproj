@@ -68,12 +68,6 @@
     <Compile Include="Formularios\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\FormAlert.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\FormAlert.Designer.cs">
-      <DependentUpon>FormAlert.cs</DependentUpon>
-    </Compile>
     <Compile Include="Formularios\FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,9 +120,6 @@
     </Compile>
     <EmbeddedResource Include="Formularios\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\FormAlert.resx">
-      <DependentUpon>FormAlert.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>

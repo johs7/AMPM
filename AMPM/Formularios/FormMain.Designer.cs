@@ -250,7 +250,7 @@
             this.DgvEstado.Name = "DgvEstado";
             this.DgvEstado.RowHeadersVisible = false;
             this.DgvEstado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvEstado.Size = new System.Drawing.Size(574, 270);
+            this.DgvEstado.Size = new System.Drawing.Size(639, 270);
             this.DgvEstado.TabIndex = 33;
             this.DgvEstado.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.DgvEstado.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;

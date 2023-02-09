@@ -49,9 +49,9 @@
             this.btnBuscar = new Guna.UI2.WinForms.Guna2Button();
             this.btnReg = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.label6 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.pbxPerfil = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.DgvProducts)).BeginInit();
             this.guna2CustomGradientPanel1.SuspendLayout();
@@ -84,6 +84,7 @@
             this.txtCodigo.ShadowDecoration.Parent = this.txtCodigo;
             this.txtCodigo.Size = new System.Drawing.Size(116, 31);
             this.txtCodigo.TabIndex = 3;
+            this.txtCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigo_KeyPress);
             // 
             // label1
             // 
@@ -226,6 +227,7 @@
             this.txtProveedor.ShadowDecoration.Parent = this.txtProveedor;
             this.txtProveedor.Size = new System.Drawing.Size(116, 31);
             this.txtProveedor.TabIndex = 11;
+            this.txtProveedor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtProveedor_KeyPress);
             // 
             // label5
             // 
@@ -425,18 +427,6 @@
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(861, 69);
             this.guna2CustomGradientPanel1.TabIndex = 25;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Linen;
-            this.label6.Location = new System.Drawing.Point(6, 9);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(405, 42);
-            this.label6.TabIndex = 26;
-            this.label6.Text = "Registro de productos";
-            // 
             // btnClose
             // 
             this.btnClose.BackColor = System.Drawing.Color.Transparent;
@@ -458,6 +448,18 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 26;
             this.pictureBox1.TabStop = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Linen;
+            this.label6.Location = new System.Drawing.Point(6, 9);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(405, 42);
+            this.label6.TabIndex = 26;
+            this.label6.Text = "Registro de productos";
             // 
             // pbxPerfil
             // 

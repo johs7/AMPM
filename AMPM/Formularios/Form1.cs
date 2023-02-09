@@ -33,12 +33,12 @@ namespace AMPM
                 }
                 else
                 {
-                   
+                    MessageBox.Show("error");
                 }
             }
             catch
             {
-               
+                MessageBox.Show("error");
             }
         }
     }

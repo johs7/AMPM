@@ -145,6 +145,7 @@ namespace AMPM.Formularios
                 if (Update() != null)
                 {
                     products product = Update();
+                    product.code = int.Parse(txtCodigo.Text);
                     product.nombre = txtNombre.Text;
                     product.stock = int.Parse(txtExistencia.Text);
                     product.estado = cmbEstado.SelectedItem.ToString();
@@ -164,6 +165,7 @@ namespace AMPM.Formularios
                     {
                         MessageBox.Show("modificado");
                         txtNombre.Text = "";
+                        txtCodigo.Text = "";
                         txtExistencia.Text = "";
                         cmbEstado.Items.Clear();
                         txtProveedor.Text = "";
@@ -172,13 +174,13 @@ namespace AMPM.Formularios
                     }
                     else
                     {
-                        // mostrar mensaje de error
+                        MessageBox.Show("error");
                     }
                 }
             }
             catch
             {
-                // manejar excepciones
+                MessageBox.Show("error");
             }
         }
     
@@ -231,7 +233,7 @@ namespace AMPM.Formularios
             }
             catch
             {
-              
+                MessageBox.Show("error");
             }
         }
 
@@ -259,8 +261,16 @@ namespace AMPM.Formularios
             }
 
         }
-          
-        
+
+        private void txtCodigo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SoloNumeros(e);
+        }
+
+        private void txtProveedor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SoloLetras(e);
+        }
     }
 }
     
