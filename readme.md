@@ -1,4 +1,4 @@
-Resumen del proyecto de pasantía en Sistemas
+<h1>Resumen del proyecto de pasantía en Sistemas</h1>
 Este proyecto fue elaborado para cumplir con los requerimientos de una empresa que necesitaba un sistema de escritorio para administrar sus productos y usuarios. Se utilizaron las tecnologías Visual Studio, C#, SQL Server o MySQL y Git/Github para desarrollar el sistema.
 
 El sistema cuenta con una base de datos que contiene información sobre los productos, usuarios y opciones. Además, cuenta con una pantalla de inicio de sesión o LOGIN para los usuarios registrados, y también permite el registro de nuevos usuarios con una estructura de correo y teléfono específica.
