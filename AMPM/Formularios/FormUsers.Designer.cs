@@ -122,6 +122,7 @@
             this.txtPass.ShadowDecoration.Parent = this.txtPass;
             this.txtPass.Size = new System.Drawing.Size(116, 31);
             this.txtPass.TabIndex = 3;
+            this.txtPass.Validating += new System.ComponentModel.CancelEventHandler(this.txtPass_Validating);
             // 
             // label2
             // 

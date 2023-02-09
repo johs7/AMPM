@@ -333,7 +333,30 @@ namespace AMPM.Formularios
 
         private void DgvUsers_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.DgvUsers.Rows[e.RowIndex];
 
+                txtUser.Text = row.Cells["username"].Value.ToString();
+                txtPass.Text = row.Cells["password"].Value.ToString();
+                txtNom.Text = row.Cells["name"].Value.ToString();
+                txtApe.Text = row.Cells["last_name"].Value.ToString();
+                txtCorreo.Text = row.Cells["email"].Value.ToString();
+                txtTel.Text = row.Cells["phone"].Value.ToString();
+            }
+        }
+
+        private void txtPass_Validating(object sender, CancelEventArgs e)
+        {
+            if (txtPass.Text.Length < 8)
+            {
+                e.Cancel = true;
+                ERROR.SetError(txtPass, "La contraseña debe tener al menos 8 caracteres");
+            }
+            else
+            {
+                ERROR.SetError(txtPass, "");
+            }
         }
     }
 }

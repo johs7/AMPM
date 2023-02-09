@@ -13,7 +13,6 @@ C:\Users\DELL\source\repos\AMPM\AMPM\obj\Debug\AMPM.csproj.CopyComplete
 C:\Users\DELL\source\repos\AMPM\AMPM\obj\Debug\AMPM.exe
 C:\Users\DELL\source\repos\AMPM\AMPM\obj\Debug\AMPM.pdb
 C:\Users\DELL\source\repos\AMPM\AMPM\bin\Debug\Guna.UI2.dll
-C:\Users\DELL\source\repos\AMPM\AMPM\obj\Debug\AMPM.Formularios.FormAlert.resources
 C:\Users\DELL\source\repos\AMPM\AMPM\obj\Debug\AMPM.Formularios.FormMain.resources
 C:\Users\DELL\source\repos\AMPM\AMPM\obj\Debug\AMPM.Formularios.FormUsers.resources
 C:\Users\DELL\source\repos\AMPM\AMPM\obj\Debug\AMPM.Formularios.FormProductos.resources
