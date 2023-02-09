@@ -17,3 +17,8 @@ En conclusión, este proyecto cumplió con los requerimientos de la empresa y fu
 :bookmark: Me gustaría destacar que la integración con Github y la creación de ramas y commits fueron una experiencia enriquecedora, y estoy ansioso por seguir aprendiendo sobre Git y cómo puedo utilizarlo para mejorar mis habilidades en el desarrollo de software.
 
 :tada: En general, estoy agradecido por esta oportunidad de pasantía y estoy emocionado de seguir aprendiendo y mejorando mis habilidades en el desarrollo de software.
+
+## Notas
+este es un proyecto bastante parecido el cual estoy trabajando y mejorando eficiencia y velocidad para el desarrollo de una farmacia ----->>>
+[Farmacia System](https://github.com/johs7/Farmacia-System)
+
