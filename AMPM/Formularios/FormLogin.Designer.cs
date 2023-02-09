@@ -1,6 +1,6 @@
 ﻿namespace AMPM
 {
-    partial class Form1
+    partial class FormLogin
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -32,7 +32,7 @@
             this.txtPass = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.txtUser = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.BtnRegistrar = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -123,21 +123,21 @@
             this.txtUser.Size = new System.Drawing.Size(200, 36);
             this.txtUser.TabIndex = 0;
             // 
-            // guna2Button1
+            // BtnRegistrar
             // 
-            this.guna2Button1.BorderRadius = 15;
-            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
-            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
-            this.guna2Button1.FillColor = System.Drawing.Color.DarkSeaGreen;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Location = new System.Drawing.Point(58, 315);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(180, 45);
-            this.guna2Button1.TabIndex = 4;
-            this.guna2Button1.Text = "Iniciar Sesion";
+            this.BtnRegistrar.CheckedState.Parent = this.BtnRegistrar;
+            this.BtnRegistrar.CustomImages.Parent = this.BtnRegistrar;
+            this.BtnRegistrar.FillColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BtnRegistrar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.BtnRegistrar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BtnRegistrar.HoverState.Parent = this.BtnRegistrar;
+            this.BtnRegistrar.Location = new System.Drawing.Point(95, 299);
+            this.BtnRegistrar.Name = "BtnRegistrar";
+            this.BtnRegistrar.ShadowDecoration.Parent = this.BtnRegistrar;
+            this.BtnRegistrar.Size = new System.Drawing.Size(105, 35);
+            this.BtnRegistrar.TabIndex = 4;
+            this.BtnRegistrar.Text = "Registrar";
+            this.BtnRegistrar.Click += new System.EventHandler(this.BtnRegistrar_Click);
             // 
             // Form1
             // 
@@ -145,7 +145,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Crimson;
             this.ClientSize = new System.Drawing.Size(309, 372);
-            this.Controls.Add(this.guna2Button1);
+            this.Controls.Add(this.BtnRegistrar);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.guna2PictureBox1);
@@ -164,7 +164,7 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2TextBox txtPass;
         private Guna.UI2.WinForms.Guna2Button btnLogin;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button BtnRegistrar;
     }
 }
 

@@ -1,4 +1,5 @@
 ﻿using AMPM.clases;
+using AMPM.Formularios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,10 +12,10 @@ using System.Windows.Forms;
 
 namespace AMPM
 {
-    public partial class Form1 : Form
+    public partial class FormLogin : Form
     {
         ClassUsers usuario = new ClassUsers();
-        public Form1()
+        public FormLogin()
         {
             InitializeComponent();
         }
@@ -40,6 +41,12 @@ namespace AMPM
             {
                 MessageBox.Show("error");
             }
+        }
+
+        private void BtnRegistrar_Click(object sender, EventArgs e)
+        {
+            FormUsers formu = new FormUsers();
+            formu.ShowDialog();
         }
     }
 }

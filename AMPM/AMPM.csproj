@@ -62,11 +62,11 @@
     <Compile Include="Clases\ClassProduct.cs" />
     <Compile Include="Clases\ClassUsers.cs" />
     <Compile Include="Clases\ProductOptionResult.cs" />
-    <Compile Include="Formularios\Form1.cs">
+    <Compile Include="Formularios\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Formularios\FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\FormMain.cs">
       <SubType>Form</SubType>
@@ -118,8 +118,8 @@
     <Compile Include="users.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Formularios\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
